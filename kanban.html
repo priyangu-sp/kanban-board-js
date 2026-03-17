@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0"/>
+        <title>Kanban To-do</title>
+
+        <link rel = "stylesheet" href = "./kanban.css"/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <h1>Kanban Board</h1>
+
+        <div class = "board">
+            <div class = "todo column" ondrop = "drop(event)" ondragover = "allowDrop(event)">
+                <h2>• To-Do</h2>
+                <div class="tasks"></div>
+                <input class = "task" type = "text" placeholder="+  Add a new task" />
+            </div>
+
+            <div class = "progress column" ondrop = "drop(event)" ondragover = "allowDrop(event)">
+                <h2>• In Progress</h2>
+                <div class="tasks"></div>
+            </div>
+
+            <div class = "completed column" ondrop = "drop(event)" ondragover = "allowDrop(event)">
+                <h2>• Completed</h2>
+                <div class="tasks"></div>
+            </div>
+        </div>
+
+        <script src="kanban.js"></script>
+    </body>
+</html>
